@@ -47,7 +47,7 @@ CREATE TABLE matriculacions(
 	CodiAssignatura INT UNSIGNED NOT NULL,
 	-- Els 4 primers dìgits són l'any d'inici de curs,
 	-- els últims 4 dígits són l'any de final de curs (ex: 20252026, 20302031)
-	AnyAcademic SMALLINT UNSIGNED, 
+	AnyAcademic INT UNSIGNED, 
 	CONSTRAINT matriculacions_fk_alumnes FOREIGN KEY(MatriculaAlumne) REFERENCES alumnes(NumMatricula),
 	CONSTRAINT matriculacions_fk_assignatures FOREIGN KEY(CodiAssignatura) REFERENCES assignatures(Codi),
 	CONSTRAINT matriculacions_pk PRIMARY KEY(id)
